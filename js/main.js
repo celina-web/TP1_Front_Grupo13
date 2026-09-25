@@ -1,7 +1,7 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-navigation");
 
-document.querySelectorAll(".artist-card").forEach((card) => {
+const setCardFlipped = (card, isFlipped) => {
     const front = card.querySelector(".artist-card-front");
     const back = card.querySelector(".artist-card-back");
 
@@ -9,17 +9,31 @@ document.querySelectorAll(".artist-card").forEach((card) => {
         return;
     }
 
-    const toggleCard = () => {
-        const isFlipped = card.classList.toggle("is-flipped");
-        const artistName = back.querySelector("h2")?.textContent ?? "artista";
+    const artistName = back.querySelector("h2")?.textContent ?? "artista";
 
-        card.setAttribute("aria-pressed", String(isFlipped));
-        card.setAttribute(
-            "aria-label",
-            `${isFlipped ? "Volver a la portada de" : "Ver información de"} ${artistName}`
-        );
-        front.setAttribute("aria-hidden", String(isFlipped));
-        back.setAttribute("aria-hidden", String(!isFlipped));
+    card.classList.toggle("is-flipped", isFlipped);
+    card.setAttribute("aria-pressed", String(isFlipped));
+    card.setAttribute(
+        "aria-label",
+        `${isFlipped ? "Volver a la portada de" : "Ver información de"} ${artistName}`
+    );
+    front.setAttribute("aria-hidden", String(isFlipped));
+    back.setAttribute("aria-hidden", String(!isFlipped));
+};
+
+document.querySelectorAll(".artist-card").forEach((card) => {
+    const toggleCard = () => {
+        const shouldFlip = !card.classList.contains("is-flipped");
+
+        if (shouldFlip) {
+            document.querySelectorAll(".artist-card.is-flipped").forEach((openCard) => {
+                if (openCard !== card) {
+                    setCardFlipped(openCard, false);
+                }
+            });
+        }
+
+        setCardFlipped(card, shouldFlip);
     };
 
     card.addEventListener("click", toggleCard);

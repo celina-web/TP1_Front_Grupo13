@@ -1,6 +1,36 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-navigation");
 
+document.querySelectorAll(".artist-card").forEach((card) => {
+    const front = card.querySelector(".artist-card-front");
+    const back = card.querySelector(".artist-card-back");
+
+    if (!front || !back) {
+        return;
+    }
+
+    const toggleCard = () => {
+        const isFlipped = card.classList.toggle("is-flipped");
+        const artistName = back.querySelector("h2")?.textContent ?? "artista";
+
+        card.setAttribute("aria-pressed", String(isFlipped));
+        card.setAttribute(
+            "aria-label",
+            `${isFlipped ? "Volver a la portada de" : "Ver información de"} ${artistName}`
+        );
+        front.setAttribute("aria-hidden", String(isFlipped));
+        back.setAttribute("aria-hidden", String(!isFlipped));
+    };
+
+    card.addEventListener("click", toggleCard);
+    card.addEventListener("keydown", (event) => {
+        if ((event.key === "Enter" || event.key === " ") && !event.repeat) {
+            event.preventDefault();
+            toggleCard();
+        }
+    });
+});
+
 if (menuToggle instanceof HTMLButtonElement && navigation instanceof HTMLElement) {
     const navbar = menuToggle.closest(".navbar");
 

@@ -3,26 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>WebFest 2026</title>
     <title>Bitácora</title>
 </head>
 <body>
-    <header>
-        nav class="navbar">
-            <div class="logo">
-                WEB<br>FEST
-            </div>
 
-            <nav>
-                <a href="index.html">INICIO</a>
-                <a href="bitacora.html" class="active">BITÁCORA</a>
-                <a href="#">GALERÍA</a>
-                <a href="#">CONTACTO</a>
-            </nav>
+        <!-- NAVBAR -->
+    <header class="navbar">
 
-            <div class="year">
-                2026
-            </div>
+        <div class="logo">
+            WEB<br>FEST
+        </div>
+
+        <nav id="site-navigation">
+            <a href="index.html" class="active">INICIO</a>
+            <a href="index.html#artistas">ARTISTAS</a>
+            <a href="bitacora.html">BITÁCORA</a>
+        </nav>
+
+        <div class="year">
+            2026
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="site-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
     </header>
+    <section class="tour" id="tour">
 
+    <div class="tour-title">
+        <span>BITÁCORA</span>
+        <h2>TOUR DATES</h2>
+    </div>
+
+    <div class="tour-list">
+
+        <!-- FECHA 1 -->
+        <article class="tour-date">
+
+            <div class="date">
+                <span class="day">22</span>
+                <span class="month">SEP</span>
+                <span class="year">2026</span>
+            </div>
+
+            <div class="venue">
+                <h3>Estadio Monumental</h3>
+                <p>Buenos Aires, Argentina</p>
+            </div>
+
+             <span class="sold">
+                SOLD OUT
+            </span>
+
+            <div class="tour-comment">
+                <p>Nos reunimos para discutir y poner en común las consignas, ideas, temática y 
+                    separación de tareas. Propusimos diferentes temáticas pero aún sin decisión tomada.</p>
+            </div>
+
+        </article>
+
+        <!-- FECHA 2 -->
+        <article class="tour-date">
+
+            <div class="date">
+                <span class="day">23</span>
+                <span class="month">SEP</span>
+                <span class="year">2026</span>
+            </div>
+
+            <div class="venue">
+                <h3>Estadio Mario Alberto Kempes</h3>
+                <p>Córdoba, Argentina</p>
+            </div>
+
+             <span class="sold">
+                SOLD OUT
+            </span>
+
+            <div class="tour-comment">
+                <p>Cada integrante brinda una idea, se toma la decisión por temática de
+                     festival de música. Con una bitácora estilo "World Tour".</p>
+                <p>Se define la estética, paleta de colores, tipografía, responsabilidades
+                    de cada uno y repositorio en GitHub.
+                </p>
+            </div>
+
+        </article>
+
+
+        <!-- FECHA 3 -->
+        <article class="tour-date">
+
+            <div class="date">
+                <span class="day">25</span>
+                <span class="month">SEP</span>
+                <span class="year">2026</span>
+            </div>
+
+            <div class="venue">
+                <h3>Estadio Único</h3>
+                <p >La Plata, Argentina</p>
+            </div>
+
+             <span class="sold">
+                SOLD OUT
+            </span>
+
+            <div class="tour-comment">
+                <p>Aca va el comentario</p>
+            </div>
+
+        </article>
+
+
+        <!-- FECHA 4 -->
+        <article class="tour-date">
+
+            <div class="date">
+                <span class="day">26</span>
+                <span class="month">SEP</span>
+                <span class="year">2026</span>
+            </div>
+
+            <div class="venue">
+                <h3>Estadio Vélez</h3>
+                <p>Buenos Aires, Argentina</p>
+            </div>
+
+             <span class="sold">
+                SOLD OUT
+            </span>
+
+            <div class="tour-comment">
+                <p>Aca va el comentario</p>
+            </div>
+
+        </article>
+
+        <article class="tour-date">
+
+            <div class="date">
+                <span class="day">27</span>
+                <span class="month">SEP</span>
+                <span class="year">2026</span>
+            </div>
+
+            <div class="venue">
+                <h3>Estadio Kempes</h3>
+                <p>Córdoba, Argentina</p>
+            </div>
+
+            <span class="sold">
+                SOLD OUT
+            </span>
+
+            <div class="tour-comment">
+                <p>Aca va el comentario</p>
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- OFFICIAL STORE -->
+
+<section class="store">
+
+    <div class="store-title">
+        <span>MERCH</span>
+        <h2>OFFICIAL STORE</h2>
+    </div>
+
+    <div class="store-grid">
+
+        <article class="store-card">
+            <div class="store-image">
+                <img src="img/merch1.jpg" alt="Merchandising">
+            </div>
+
+            <h3>MERCH ONE</h3>
+
+            <a href="#" class="buy">
+                BUY NOW
+            </a>
+        </article>
+
+
+        <article class="store-card">
+            <div class="store-image">
+                <img src="img/merch2.jpg" alt="Merchandising">
+            </div>
+
+            <h3>MERCH TWO</h3>
+
+            <a href="#" class="buy">
+                BUY NOW
+            </a>
+        </article>
+
+
+        <article class="store-card">
+            <div class="store-image">
+                <img src="img/merch3.jpg" alt="Merchandising">
+            </div>
+
+            <h3>MERCH THREE</h3>
+
+            <a href="#" class="buy">
+                BUY NOW
+            </a>
+        </article>
+
+    </div>
+
+</section>
+
+    <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,669 @@
+/* Base */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5efd9;
+    color: #111;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    min-height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 5%;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 32px;
+    line-height: 0.8;
+
+    transform: rotate(-5deg);
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar nav a {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  padding: 0.4rem 0;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ff7a18;
+  text-decoration: underline;
+}
+
+nav:has(a:hover) a:not(:hover) {
+  opacity: 0.3;
+}
+
+.navbar nav a.active::after {
+    content: "";
+
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #e32f2f;
+}
+
+.year {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: calc(100vh - 85px);
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 5% 120px;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1200px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* TÍTULO */
+
+.hero h1 {
+    font-family: "Permanent Marker", cursive;
+
+    font-size: clamp(80px, 11vw, 150px);
+
+    line-height: 0.9;
+
+    transform: rotate(-3deg);
+
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: clamp(13px, 1.5vw, 18px);
+
+    letter-spacing: 1px;
+
+    margin-bottom: 45px;
+}
+
+.subtitle span {
+    margin: 0 8px;
+}
+
+
+/* =========================
+   ARTISTAS
+========================= */
+
+.artists {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+
+    width: 100%;
+}
+
+
+/* CARD */
+
+.artist-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 10px;
+
+    overflow: hidden;
+
+    border: 4px solid #111;
+
+    transform: rotate(-1deg);
+
+    transition: transform 0.25s ease;
+}
+
+.artist-card:nth-child(2) {
+    transform: rotate(1deg);
+}
+
+.artist-card:nth-child(3) {
+    transform: rotate(-1.5deg);
+}
+
+.artist-card:nth-child(4) {
+    transform: rotate(1deg);
+}
+
+.artist-card:hover {
+    transform: translateY(-10px) rotate(0deg);
+}
+
+
+/* COLORES */
+
+.artist-card.green {
+    background: #39d879;
+}
+
+.artist-card.pink {
+    background: #ed3b83;
+}
+
+.artist-card.orange {
+    background: #f26925;
+}
+
+.artist-card.yellow {
+    background: #f2d532;
+}
+
+
+/* IMÁGENES */
+
+.artist-image {
+    width: 100%;
+    height: 245px;
+
+    overflow: hidden;
+
+    background: #222;
+}
+
+.artist-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(100%) contrast(1.25);
+
+    mix-blend-mode: multiply;
+
+    transition: transform 0.3s ease;
+}
+
+.artist-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* NOMBRE ARTISTA */
+
+.artist-info {
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #fff;
+}
+
+.artist-info h2 {
+    font-family: "Permanent Marker", cursive;
+
+    font-size: clamp(22px, 2.3vw, 32px);
+
+    transform: rotate(-2deg);
+}
+
+.artist-info span {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 22px;
+}
+
+
+/* BOTÓN */
+
+.explore {
+    margin-top: 45px;
+
+    padding: 17px 40px;
+
+    border: 3px solid #111;
+    border-radius: 10px;
+
+    background: #111;
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.explore:hover {
+    background: transparent;
+    color: #111;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   DECORACIONES
+========================= */
+
+.decor {
+    position: absolute;
+
+    z-index: 1;
+
+    opacity: 0.95;
+}
+
+
+/* Mancha rosa */
+
+.decor-pink {
+    width: 100px;
+    height: 210px;
+
+    left: -25px;
+    top: 180px;
+
+    background: #ef3982;
+
+    clip-path: polygon(
+        20% 0,
+        50% 15%,
+        30% 30%,
+        80% 25%,
+        50% 50%,
+        90% 60%,
+        45% 65%,
+        75% 90%,
+        35% 80%,
+        15% 100%,
+        20% 65%,
+        0 50%,
+        20% 35%,
+        0 20%
+    );
+
+    transform: rotate(-8deg);
+}
+
+
+/* Mancha verde */
+
+.decor-green {
+    width: 100px;
+    height: 210px;
+
+    right: -20px;
+    top: 160px;
+
+    background: #1acb91;
+
+    clip-path: polygon(
+        70% 0,
+        100% 20%,
+        75% 35%,
+        100% 45%,
+        70% 55%,
+        100% 70%,
+        65% 70%,
+        75% 100%,
+        45% 75%,
+        35% 100%,
+        30% 70%,
+        0 80%,
+        25% 50%,
+        0 40%,
+        35% 30%,
+        20% 5%
+    );
+
+    transform: rotate(8deg);
+}
+
+
+/* Rayo */
+
+.lightning {
+    position: absolute;
+
+    top: 40px;
+    left: 20%;
+
+    color: #f4c400;
+
+    font-size: 100px;
+    font-weight: bold;
+
+    transform: rotate(-15deg);
+}
+
+
+/* PÚBLICO INFERIOR */
+
+.crowd {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 55px;
+
+    background: #111;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    z-index: 5;
+}
+
+.person {
+    width: 30px;
+    height: 30px;
+
+    background: #111;
+
+    border-radius: 50% 50% 0 0;
+
+    position: relative;
+}
+
+.person::before {
+    content: "";
+
+    position: absolute;
+
+    width: 14px;
+    height: 14px;
+
+    background: #111;
+
+    border-radius: 50%;
+
+    top: -12px;
+    left: 8px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .navbar nav {
+        gap: 20px;
+    }
+
+    .artists {
+        grid-template-columns: repeat(2, 1fr);
+
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .artist-card {
+        min-height: 300px;
+    }
+
+    .artist-image {
+        height: 220px;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .lightning {
+        left: 5%;
+        font-size: 70px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: auto;
+
+        padding: 18px 20px;
+
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .year {
+        font-size: 30px;
+    }
+
+    .navbar nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        margin-top: 18px;
+
+        gap: 18px;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+
+    .hero {
+        padding: 45px 20px 100px;
+
+        align-items: flex-start;
+    }
+
+
+    .hero h1 {
+        font-size: clamp(65px, 20vw, 100px);
+
+        margin-bottom: 20px;
+    }
+
+
+    .subtitle {
+        font-size: 11px;
+
+        line-height: 1.8;
+
+        max-width: 300px;
+
+        margin: 0 auto 35px;
+    }
+
+    .subtitle span {
+        margin: 0 3px;
+    }
+
+
+    .artists {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+    }
+
+
+    .artist-card {
+        min-height: 230px;
+
+        border-width: 3px;
+
+        padding: 6px;
+    }
+
+
+    .artist-image {
+        height: 175px;
+    }
+
+
+    .artist-info {
+        height: 45px;
+    }
+
+
+    .artist-info h2 {
+        font-size: 20px;
+    }
+
+
+    .artist-info span {
+        font-size: 16px;
+    }
+
+
+    .explore {
+        margin-top: 30px;
+
+        width: 100%;
+
+        padding: 15px 20px;
+
+        font-size: 13px;
+    }
+
+
+    .decor-pink {
+        width: 60px;
+        height: 140px;
+
+        top: 180px;
+        left: -25px;
+    }
+
+
+    .decor-green {
+        width: 60px;
+        height: 140px;
+
+        top: 180px;
+        right: -20px;
+    }
+
+
+    .lightning {
+        top: 100px;
+        left: 3%;
+
+        font-size: 50px;
+    }
+
+
+    .crowd {
+        height: 35px;
+    }
+
+    .person {
+        width: 20px;
+        height: 22px;
+    }
+
+    .person::before {
+        width: 10px;
+        height: 10px;
+
+        top: -8px;
+        left: 5px;
+    }
+}
+
+
+/* =========================
+   MOBILE MUY PEQUEÑO
+========================= */
+
+@media (max-width: 380px) {
+
+    .artists {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-card {
+        max-width: 280px;
+        width: 100%;
+
+        margin: auto;
+    }
+
+    .artist-image {
+        height: 230px;
+    }
+
+    .navbar nav {
+        gap: 12px;
+    }
+}

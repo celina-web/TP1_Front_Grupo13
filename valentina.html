@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>WebFest 2026</title>
-    <title>Bitácora</title>
+    <link rel="stylesheet" href="css/perfil.css">
+    <title>Valen | WebFest 2026</title>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
         </div>
 
         <nav id="site-navigation">
-            <a href="index.html" class="active">INICIO</a>
+            <a href="index.html">INICIO</a>
             <a href="index.html#artistas">ARTISTAS</a>
             <a href="bitacora.html">BITÁCORA</a>
         </nav>
@@ -37,8 +37,89 @@
 
     </header>
 
-    <h1>Valentina</h1>
+
+    <!-- PERFIL -->
+    <main class="profile" style="--profile-color: #FF4F81;">
+
+        <div class="profile-poster">
+
+            <figure class="profile-photo">
+                <img src="img/valentina-mascota.webp" alt="Luna, la mascota de Valentina: una golden retriever blanca sonriendo">
+                <figcaption>Luna, mi compañera</figcaption>
+            </figure>
+
+            <div class="profile-heading">
+                <span class="profile-number">#02</span>
+                <h1>VALEN</h1>
+                <p class="profile-fullname">Valentina</p>
+            </div>
+
+        </div>
+
+        <section class="profile-data" aria-label="Datos de Valentina">
+
+            <dl class="profile-facts">
+                <div>
+                    <dt>Ciudad</dt>
+                    <dd>Ezeiza, Buenos Aires</dd>
+                </div>
+                <div>
+                    <dt>Edad</dt>
+                    <dd>23 años</dd>
+                </div>
+            </dl>
+
+            <p class="profile-bio">
+                Maquetadora obsesiva de los detalles. Si el diseño no queda igual en 400 px
+                que en 1200 px, no duermo. Toco el piano (mal) y programo (mejor).
+            </p>
+
+            <div class="profile-block">
+                <h2>Skills</h2>
+                <ul class="profile-list profile-skills">
+                    <li>HTML semántico</li>
+                    <li>CSS (Flexbox y Grid)</li>
+                    <li>JavaScript</li>
+                    <li>Diseño UX/UI en Figma</li>
+                </ul>
+            </div>
+
+            <div class="profile-block">
+                <h2>Películas favoritas</h2>
+                <ol class="profile-list profile-picks" data-kind="película">
+                    <li>Whiplash <small>(2014)</small></li>
+                    <li>La La Land <small>(2016)</small></li>
+                    <li>Ratatouille <small>(2007)</small></li>
+                </ol>
+            </div>
+
+            <div class="profile-block">
+                <h2>Discos favoritos</h2>
+                <ol class="profile-list profile-picks" data-kind="disco">
+                    <li>Clics Modernos <small>— Charly García</small></li>
+                    <li>El amor después del amor <small>— Fito Páez</small></li>
+                    <li>Future Nostalgia <small>— Dua Lipa</small></li>
+                </ol>
+            </div>
+
+            <!-- FUNCIÓN DINÁMICA: recomendador aleatorio (js/valentina.js) -->
+            <div class="profile-random">
+                <button type="button" class="profile-random-btn" id="random-pick">
+                    🎲 ¿Qué escucho / veo hoy?
+                </button>
+                <p class="profile-random-result" id="random-result" aria-live="polite"></p>
+            </div>
+
+        </section>
+
+        <nav class="profile-actions" aria-label="Navegación del perfil">
+            <a href="index.html#artistas" class="profile-btn">← Volver al line up</a>
+            <a href="bitacora.html" class="profile-btn profile-btn-outline">Ver bitácora →</a>
+        </nav>
+
+    </main>
 
     <script src="js/main.js" defer></script>
+    <script src="js/valentina.js" defer></script>
 </body>
 </html>

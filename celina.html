@@ -7,20 +7,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
-    <title>WebFest 2026</title>
-    <title>Bitácora</title>
+    <link rel="stylesheet" href="css/perfil.css">
+    <title>Celi | WebFest 2026</title>
 </head>
 <body>
 
         <!-- NAVBAR -->
     <header class="navbar">
 
-        <div class="logo">
-            WEB<br>FEST
-        </div>
+        <a class="logo" href="index.html">
+            <div class="logo">
+                WEB<br>FEST
+            </div>
+        </a>
 
         <nav id="site-navigation">
-            <a href="index.html" class="active">INICIO</a>
+            <a href="index.html">INICIO</a>
             <a href="index.html#artistas">ARTISTAS</a>
             <a href="bitacora.html">BITÁCORA</a>
         </nav>
@@ -37,8 +39,93 @@
 
     </header>
 
-    <h1>Celina</h1>
+
+    <!-- PERFIL -->
+    <main class="profile" style="--profile-color: #FFD447;">
+
+        <div class="profile-poster">
+
+            <figure class="profile-photo">
+                <img src="img/celina-mascota.jpeg" alt="Felipe, un perro pequeño tomando sol en un banco">
+                <figcaption>Felipe, mi mascota</figcaption>
+            </figure>
+
+            <div class="profile-heading">
+                <span class="profile-number">#02</span>
+                <h1>Celi</h1>
+                <p class="profile-fullname">Celina</p>
+            </div>
+
+        </div>
+
+        <section class="profile-data" aria-label="Datos de Celina">
+
+            <dl class="profile-facts">
+                <div>
+                    <dt>Ciudad</dt>
+                    <dd>Caballito, CABA</dd>
+                </div>
+                <div>
+                    <dt>Edad</dt>
+                    <dd>30 años</dd>
+                </div>
+            </dl>
+
+            <p class="profile-bio">
+                Me especializo en resolver problemas que yo misma creé hace dos semanas, en discutir 
+                con bases de datos que no me responden, y en decir "en mi máquina funciona" con total 
+                seguridad mientras rezo por dentro.
+                Mi misión: que todo funcione, que nadie lo note, y que cuando se caiga, no sea culpa 
+                mía (aunque probablemente lo sea).
+            </p>
+
+            <div class="profile-block">
+                <h2>Skills</h2>
+                <ul class="profile-list profile-skills">
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>SQL</li>
+                    <li>AWS</li>
+                </ul>
+            </div>
+
+            <div class="profile-block">
+                <h2>Películas favoritas</h2>
+                <ol class="profile-list profile-picks" data-kind="película">
+                    <li>El Origen <small>(2010)</small></li>
+                    <li>Batman: el caballero de la noche <small>(2008)</small></li>
+                    <li>El planeta del tesoro <small>(2002)</small></li>
+                </ol>
+            </div>
+
+            <div class="profile-block">
+                <h2>Discos favoritos</h2>
+                <ol class="profile-list profile-picks" data-kind="disco">
+                    <li>Thriller <small>— Michael Jackson</small></li>
+                    <li>Britney <small>— Briteny Spears</small></li>
+                    <li>Monkey Business <small>— Black Eyed Peas</small></li>
+                </ol>
+            </div>
+
+            <!-- FUNCIÓN DINÁMICA: recomendador aleatorio (js/valentina.js) 
+            <div class="profile-random">
+                <button type="button" class="profile-random-btn" id="random-pick">
+                    🎲 ¿Qué escucho / veo hoy?
+                </button>
+                <p class="profile-random-result" id="random-result" aria-live="polite"></p>
+            </div>
+            -->
+
+        </section>
+
+        <nav class="profile-actions" aria-label="Navegación del perfil">
+            <a href="index.html#artistas" class="profile-btn">← Volver al line up</a>
+            <a href="bitacora.html" class="profile-btn profile-btn-outline">Ver bitácora →</a>
+        </nav>
+
+    </main>
 
     <script src="js/main.js" defer></script>
+    
 </body>
 </html>

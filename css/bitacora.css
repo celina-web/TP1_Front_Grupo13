@@ -1,0 +1,467 @@
+/*º=========================
+   BITÁCORA
+========================= */
+
+.bts {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: #333333;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+/* =========================
+   TOUR
+========================= */
+
+.tour {
+    width: 100%;
+    padding: 100px 7%;
+
+    background: #f5efd9;
+}
+
+
+/* TÍTULO */
+
+.tour-title {
+    margin-bottom: 70px;
+
+    text-align: center;
+}
+
+.tour-title span,
+.store-title span {
+    display: block;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    color: #e83268;
+
+    margin-bottom: 5px;
+}
+
+.tour-title h2,
+.store-title h2 {
+    font-family: "Permanent Marker", cursive;
+
+    font-size: clamp(50px, 7vw, 100px);
+
+    line-height: 1;
+
+    transform: rotate(-2deg);
+}
+
+
+/* =========================
+   LISTA
+========================= */
+
+.tour-list {
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   FECHA
+========================= */
+
+.tour-date {
+    display: grid;
+
+    grid-template-columns: 170px 1fr 150px;
+
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 28px 0;
+
+    border-bottom: 2px solid #111111;
+}
+
+
+/* FECHA */
+
+.date {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+}
+
+.date .day {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 58px;
+
+    line-height: 1;
+}
+
+.date .month {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 25px;
+}
+
+.date .year {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #666666;
+}
+
+
+/* =========================
+   ESTADIO
+========================= */
+
+.venue h3 {
+    font-family: "Poppins", sans-serif;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.venue p {
+    font-size: 14px;
+
+    color: #555;
+}
+
+    /* Entrada Bitácora */
+
+    .tour-comment {
+    grid-column: 2 / 4;
+    width: 100%;
+    font-size: 17px;
+    text-align: left;
+    color: #e83268;
+
+}
+
+
+/* =========================
+   BOTÓN TICKETS
+========================= */
+
+.tickets,
+.sold {
+    justify-self: end;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 130px;
+
+    padding: 12px 20px;
+
+    border: 2px solid #111;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #111;
+
+    transition: 0.2s ease;
+}
+
+.tickets:hover {
+    background: #111;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* SOLD OUT */
+
+.sold {
+    border-color: #aaa;
+
+    color: #888;
+
+    font-size: 11px;
+
+    cursor: default;
+}
+
+
+/* =========================
+   OFFICIAL STORE
+========================= */
+
+.store {
+    width: 100%;
+
+    padding: 100px 7% 130px;
+
+    background: #111;
+
+    color: white;
+}
+
+.store-title {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.store-title h2 {
+    color: white;
+}
+
+
+/* GRID */
+
+.store-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* CARD */
+
+.store-card {
+    background: #f5efd9;
+
+    color: #111;
+
+    padding: 12px;
+
+    transition: 0.25s ease;
+}
+
+.store-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* IMAGEN */
+
+.store-image {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: #ddd;
+}
+
+.store-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+.store-card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* INFO */
+
+.store-card h3 {
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 24px;
+
+    margin: 15px 5px 10px;
+}
+
+
+/* BUY */
+
+.buy {
+    display: inline-block;
+
+    margin: 0 5px 10px;
+
+    padding: 9px 15px;
+
+    background: #111;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    transition: 0.2s;
+}
+
+.buy:hover {
+    background: #e83268;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .tour,
+    .store {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .tour-date {
+        grid-template-columns: 130px 1fr 120px;
+
+        gap: 20px;
+    }
+
+    .date .day {
+        font-size: 48px;
+    }
+
+    .venue h3 {
+        font-size: 17px;
+    }
+
+    .store-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .tour {
+        padding: 70px 20px;
+    }
+
+    .tour-title {
+        margin-bottom: 45px;
+    }
+
+
+    /* Cada concierto se convierte
+       en una fila de 2 partes */
+
+    .tour-date {
+        grid-template-columns: 90px 1fr;
+
+        gap: 15px;
+
+        padding: 25px 0;
+    }
+
+
+    /* Fecha */
+
+    .date {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+    }
+
+    .date .day {
+        font-size: 48px;
+    }
+
+    .date .month {
+        font-size: 20px;
+    }
+
+    .date .year {
+        font-size: 11px;
+    }
+
+
+    /* Estadio */
+
+    .venue {
+        align-self: center;
+    }
+
+    .venue h3 {
+        font-size: 15px;
+
+        line-height: 1.3;
+    }
+
+    .venue p {
+        font-size: 12px;
+
+        line-height: 1.4;
+    }
+
+
+    /* Botón */
+
+    .tickets,
+    .sold {
+        grid-column: 2;
+
+        justify-self: start;
+
+        min-width: 110px;
+
+        padding: 9px 15px;
+    }
+
+
+    /* STORE */
+
+    .store {
+        padding: 70px 20px 100px;
+    }
+
+    .store-title {
+        margin-bottom: 40px;
+    }
+
+    .store-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 400px;
+    }
+}
+

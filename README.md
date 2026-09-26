@@ -59,10 +59,12 @@ TP1_Front_Grupo13/
 ├── celina.html         # Perfil de Celina
 ├── bitacora.html       # Bitácora del proceso ("World Tour")
 ├── css/
-│   ├── style.css       # Estilos globales: navbar, portada, cards, bitácora, store
-│   └── perfil.css      # Layout compartido de los perfiles individuales
+│   ├── base.css       # Estilos globales: navbar, portada, cards.
+│   ├── perfil.css     # Layout compartido de los perfiles individuales
+│   └── bitácora.css   # Layout bitácora, store.
 ├── js/
 │   ├── main.js         # Menú hamburguesa, flip de cards y animaciones de scroll
+│   ├── bitacora.js     # función dinámica para mostrar entradas de la bitácora.
 │   └── valentina.js    # Función dinámica del perfil de Valentina
 ├── img/                # Fotos, avatares e imágenes del sitio
 └── README.md
@@ -124,6 +126,9 @@ TP1_Front_Grupo13/
 |---------|-------------|
 | **Flip de las cards del line up** | Al hacer clic (o Enter/Espacio con el teclado) sobre una card, gira en 3D y muestra el dorso con información del artista. Sólo puede haber una card abierta a la vez. Actualiza `aria-pressed`, `aria-label` y `aria-hidden` para lectores de pantalla. |
 | **Menú hamburguesa** | Debajo de 700 px el menú se colapsa en un botón. Al tocarlo se despliega con transición; se cierra al elegir un enlace o con la tecla `Esc`. |
+
+
+### Portada (`js/bitácora.js`)
 | **Aparición al hacer scroll** | Con `IntersectionObserver`, las cards y las fechas de la bitácora aparecen con un fundido escalonado a medida que entran en pantalla. Respeta `prefers-reduced-motion`. |
 
 ### Perfiles

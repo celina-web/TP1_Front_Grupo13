@@ -19,6 +19,11 @@ const setCardFlipped = (card, isFlipped) => {
     );
     front.setAttribute("aria-hidden", String(isFlipped));
     back.setAttribute("aria-hidden", String(!isFlipped));
+
+    // El enlace al perfil sólo es enfocable cuando el dorso está visible
+    back.querySelectorAll("a").forEach((link) => {
+        link.tabIndex = isFlipped ? 0 : -1;
+    });
 };
 
 document.querySelectorAll(".artist-card").forEach((card) => {
@@ -36,8 +41,18 @@ document.querySelectorAll(".artist-card").forEach((card) => {
         setCardFlipped(card, shouldFlip);
     };
 
-    card.addEventListener("click", toggleCard);
+    const isFromLink = (event) => event.target instanceof Element && event.target.closest("a");
+
+    card.addEventListener("click", (event) => {
+        if (!isFromLink(event)) {
+            toggleCard();
+        }
+    });
     card.addEventListener("keydown", (event) => {
+        if (isFromLink(event)) {
+            return;
+        }
+
         if ((event.key === "Enter" || event.key === " ") && !event.repeat) {
             event.preventDefault();
             toggleCard();

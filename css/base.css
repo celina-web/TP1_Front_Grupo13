@@ -156,7 +156,6 @@ nav:has(a:hover) a:not(:hover) {
     width: 100%;
 }
 
-
 /* CARD */
 
 .artist-card {
@@ -732,6 +731,12 @@ nav:has(a:hover) a:not(:hover) {
         top: -8px;
         left: 5px;
     }
+}
+
+a.logo,
+a.logo:visited {
+  color: inherit;
+  text-decoration: none;
 }
 
 

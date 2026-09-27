@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
-    <title>WebFest 2026</title>
-    <title>Bitácora</title>
+    <link rel="stylesheet" href="css/perfil.css">
+    <title>Sebas | WebFest 2026</title>
 </head>
 <body>
 
@@ -39,8 +39,80 @@
 
     </header>
 
-    <h1>Sebas</h1>
+    <!-- PERFIL -->
+    <main class="profile" style="--profile-color: #65D98B;">
 
+        <div class="profile-poster">
+
+            <figure class="profile-photo">
+                <img src="img/sebas-mascota.jpeg" alt="Tango, la mascota de Sebas: un labrador con la peor de las ondas">
+                <figcaption>Tango, mi mascota que odia los lunes</figcaption>
+            </figure>
+
+            <div class="profile-heading">
+                <span class="profile-number">#01</span>
+                <h1>SEBAS</h1>
+                <p class="profile-fullname">Sebastian</p>
+            </div>
+
+        </div>
+
+        <section class="profile-data" aria-label="Datos de Sebas">
+
+            <dl class="profile-facts">
+                <div>
+                    <dt>Ciudad</dt>
+                    <dd>Balvanera, CABA </dd>
+                </div>
+                <div>
+                    <dt>Edad</dt>
+                    <dd>33 años</dd>
+                </div>
+            </dl>
+
+            <p class="profile-bio">
+                Desarrollador, 
+            </p>
+
+            <div class="profile-block">
+                <h2>Skills</h2>
+                <ul class="profile-list profile-skills">
+                    <li>HTML y CSS</li>
+                    <li>Javascript</li>
+                    <li>React</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+
+            <div class="profile-block">
+                <h2>Películas favoritas</h2>
+                <ol class="profile-list profile-picks" data-kind="película">
+                    <li>El Piso 13 <small>(1999)</small></li>
+                    <li>Bastardos Sin Gloria <small>(2009)</small></li>
+                    <li>La Familia del Futuro <small>(2007)</small></li>
+                </ol>
+            </div>
+
+            <div class="profile-block">
+                <h2>Discos favoritos</h2>
+                <ol class="profile-list profile-picks" data-kind="disco">
+                    <li>La Edad de la Cebra <small>— Verde 70</small></li>
+                    <li>Que el Cielo Espere Sentao <small>— Melendi</small></li>
+                    <li>Otro Dia en el Planeta Tierra <small>— Intoxicados</small></li>
+                </ol>
+            </div>
+
+            <!-- FUNCIÓN DINÁMICA: (js/sebas.js) -->
+            
+
+        </section>
+
+        <nav class="profile-actions" aria-label="Navegación del perfil">
+            <a href="index.html#artistas" class="profile-btn">← Volver al line up</a>
+            <a href="bitacora.html" class="profile-btn profile-btn-outline">Ver bitácora →</a>
+        </nav>
+
+    </main>
     <script src="js/main.js" defer></script>
 </body>
 </html>

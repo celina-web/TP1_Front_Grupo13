@@ -142,7 +142,7 @@ Controla la apertura y el cierre del pase "Una más".
 
 El botón **"🎲 ¿Qué escucho / veo hoy?"** elige al azar una de las películas o discos favoritos (los lee directamente de las listas del HTML), la resalta en la lista con una animación y muestra el resultado debajo del botón (por ejemplo: *"Hoy toca disco: Clics Modernos — Charly García"*). Nunca repite la elección anterior. El mensaje está en una región `aria-live` para que también lo anuncien los lectores de pantalla.
 
-![Captura: recomendador en el perfil de Valentina](img/perfil-valentina.png)
+![Captura: recomendador en el perfil de Valentina](img/funcion-valentina.webp)
 
 #### Sebastián — Medidor de hype (`js/sebas.js`)
 

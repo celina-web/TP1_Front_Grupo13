@@ -388,11 +388,18 @@ nav:has(a:hover) a:not(:hover) {
 
     letter-spacing: 1px;
 
-    margin-bottom: 45px;
+    margin-bottom: 16px;
 }
 
 .subtitle span {
     margin: 0 8px;
+}
+
+.hero-description {
+    width: min(100%, 760px);
+    margin: 0 auto 45px;
+    font-size: clamp(14px, 1.25vw, 17px);
+    line-height: 1.7;
 }
 
 
@@ -837,7 +844,14 @@ nav:has(a:hover) a:not(:hover) {
 
         max-width: 300px;
 
-        margin: 0 auto 35px;
+        margin: 0 auto 14px;
+    }
+
+    .hero-description {
+        max-width: 520px;
+        margin-bottom: 35px;
+        font-size: 14px;
+        line-height: 1.65;
     }
 
     .subtitle span {

@@ -6,7 +6,7 @@
 
 **Propósito del equipo:** aprender a construir un sitio en equipo con HTML, CSS y JavaScript, repartiendo tareas, versionando con Git y documentando cada decisión.
 
-🔗 **Sitio publicado en Vercel:** https://tp1-front-grupo13.vercel.app
+🔗 **Sitio publicado en Vercel:** https://tp-1-front-grupo13.vercel.app
 
 📁 **Repositorio:** https://github.com/celina-web/TP1_Front_Grupo13
 

@@ -139,7 +139,11 @@ El botón **"🎲 ¿Qué escucho / veo hoy?"** elige al azar una de las películ
 
 ![Captura: recomendador en el perfil de Valentina](img/perfil-valentina.png)
 
-#### Sebastián — *(completar)*
+#### Sebastián — Medidor de hype (`js/sebas.js`)
+
+El slider **"🔥 ¿Cuánto hype hay para el show?"** cambia en vivo el mensaje y el emoji debajo a medida que lo movés, según el nivel de energía elegido (por ejemplo: *"Probando sonido... 🥱"* en los valores bajos, hasta *"¡A tocar! 🚀"* en el máximo).
+
+![Captura: Medidor de hype en el perfil de Sebas](img/hype-sebas.jpeg)
 
 #### Agustín — *(completar)*
 
@@ -163,6 +167,7 @@ La bitácora está en [bitacora.html](bitacora.html), accesible desde el menú p
 | Herramienta | Modelo | Plan | Para qué se usó |
 |-------------|--------|------|-----------------|
 | Claude Code (app de escritorio) | Claude Opus 5.5 (Anthropic) | Pago | Perfil de Valentina y README |
+| Gemini | Gemini (Google) | Gratuito | Perfil de Sebastián, ideas de interactividad JS y documentación |
 | *(completar por cada integrante)* | | | |
 
 **Cómo ayudó (perfil de Valentina):**
@@ -170,7 +175,17 @@ La bitácora está en [bitacora.html](bitacora.html), accesible desde el menú p
 - **Contenido:** redacción del README a partir de la consigna y del código existente.
 - **Revisión propia:** se revisaron y probaron los cambios en el navegador en los tres breakpoints, se adaptaron los textos y se verificó que no haya errores en consola antes de hacer commit.
 
-**Imágenes:** la foto del perfil es una foto real de una mascota (no generada con IA), elegida para no publicar fotos personales, como sugiere la consigna.
+**Cómo ayudó (perfil de Sebastián):**
+- **Código:** generación de propuestas lógicas para las interacciones del DOM (manipulación de clases CSS mediante eventos) asegurando que no se superpusieran con las funciones ya integradas por el resto del equipo.
+- **Documentación:** redacción técnica y estructuración de los apartados de JavaScript y experiencia de usuario en el README.
+
+**Cómo ayudó (perfil de Celina):**
+*(completar)*
+
+**Cómo ayudó (perfil de Agustin):**
+*(completar)*
+
+**Imágenes:** las fotos de los perfiles son fotos reales de mascotas (no generadas con IA), elegidas para no publicar fotos personales, como sugiere la consigna.
 
 **Experiencia previa del equipo:** *(completar)*
 

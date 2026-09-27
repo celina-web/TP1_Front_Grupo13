@@ -2,7 +2,7 @@
 
 > Trabajo Práctico Grupal 1 · Desarrollo de Sistemas Web (Front End) · 2026, 2do cuatrimestre
 
-**WebFest 2026** es el sitio web del Grupo 13, pensado como el afiche de un festival de música. Cada integrante del equipo es un "artista" del **line up**: la portada presenta al grupo y cada tarjeta lleva a su página de perfil. La **bitácora** se diseñó como un "World Tour", donde cada fecha de la gira es una reunión o avance del proyecto.
+**WebFest 2026** es el sitio web del Grupo 13, pensado como el afiche de un festival de música. Cada integrante del equipo es un "artista" del **line up**: la portada presenta al grupo y cada tarjeta lleva a su página de perfil. La **bitácora** se diseñó como un "World Tour": cada reunión o avance del proyecto tiene su propio ticket de concierto, con fecha, sede y talón.
 
 **Propósito del equipo:** aprender a construir un sitio en equipo con HTML, CSS y JavaScript, repartiendo tareas, versionando con Git y documentando cada decisión.
 
@@ -143,13 +143,13 @@ El botón **"🎲 ¿Qué escucho / veo hoy?"** elige al azar una de las películ
 
 #### Agustín — *(completar)*
 
-#### Celina — *(completar)*
-
+#### Celina — Generador de frases aleatorio (`js/celina.js`)
+El botón **"📚 Generá una frase random"** elige al azar una frase de autores hispanos reconocidos (los lee dentro de la función celina.js), muestra el resultado debajo del botón (por ejemplo: *"Escribo para los amigos que todavía no conozco. Los que conozco ya están hartos de escucharme - Eduardo Galeano"*).
 ---
 
 ## 📓 Bitácora
 
-La bitácora está en [bitacora.html](bitacora.html), accesible desde el menú principal en todas las páginas. Cada "fecha de la gira" registra una reunión del equipo con las decisiones tomadas, los problemas encontrados y cómo se resolvieron. Algunos hitos:
+La bitácora está en [bitacora.html](bitacora.html), accesible desde el menú principal en todas las páginas. Cada entrada se presenta como un ticket de concierto y registra una reunión del equipo con las decisiones tomadas, los problemas encontrados y cómo se resolvieron. Algunos hitos:
 
 - **22/09** — Primera reunión: lectura de la consigna y propuestas de temática.
 - **23/09** — Se elige la temática de festival de música, la paleta, las tipografías y se crea el repositorio.

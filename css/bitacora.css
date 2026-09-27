@@ -634,3 +634,113 @@
         transform: none;
     }
 }
+
+/* =========================
+   ENCORE / BACKSTAGE PASS
+========================= */
+
+.encore-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    gap: 20px;
+}
+
+.btn-encore {
+    padding: 16px 32px;
+    background: #111;
+    color: #fff;
+    border: 3px solid #111;
+    border-radius: 8px;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 6px 6px 0 #e83268;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-encore:hover {
+    transform: translateY(-4px);
+    background: #e83268;
+    color: #111;
+    box-shadow: 8px 8px 0 #111;
+}
+
+.btn-encore:focus-visible {
+    outline: 3px dashed #111;
+    outline-offset: 4px;
+}
+
+.backstage-pass {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    
+    /* Animación inicial oculta */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-20px);
+    transition: max-height 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease, transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.backstage-pass.show {
+    max-height: 400px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .backstage-pass,
+    .btn-encore {
+        transition: none;
+    }
+}
+
+.backstage-pass-inner {
+    background: #FFD447;
+    border: 4px solid #111;
+    border-radius: 12px;
+    padding: 24px;
+    transform: rotate(2deg);
+    box-shadow: 10px 10px 0 #111;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.backstage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px dashed #111;
+    padding-bottom: 12px;
+    margin-bottom: 18px;
+}
+
+.backstage-header h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 36px;
+    margin: 0;
+    color: #111;
+    letter-spacing: 2px;
+}
+
+.backstage-header span {
+    font-family: "Permanent Marker", cursive;
+    font-size: 26px;
+    color: #e83268;
+    transform: rotate(-12deg);
+}
+
+.backstage-content p {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #111;
+    margin: 0;
+}

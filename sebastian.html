@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/sebastian.css">
     <title>Sebas | WebFest 2026</title>
 </head>
 <body>
@@ -102,8 +103,19 @@
                 </ol>
             </div>
 
-            <!-- FUNCIÓN DINÁMICA: (js/sebas.js) -->
-            
+            <!-- MEDIDOR DE HYPE (js/sebas.js) -->
+
+            <div class="profile-block">
+                <h2>Medidor de Hype</h2>
+                <div class="hype-meter">
+                    <label for="hype-range" class="sr-only" style="display: none;">Nivel de hype</label>
+                    <input type="range" id="hype-range" class="hype-range" min="0" max="100" value="0" step="1">
+                    <div class="hype-result" aria-live="polite">
+                        <span id="hype-emoji" class="hype-emoji">🥱</span>
+                        <span id="hype-text" class="hype-text">Afinando la guitarra...</span>
+                    </div>
+                </div>
+            </div>
 
         </section>
 
@@ -114,5 +126,6 @@
 
     </main>
     <script src="js/main.js" defer></script>
+    <script src="js/sebas.js" defer></script>
 </body>
 </html>

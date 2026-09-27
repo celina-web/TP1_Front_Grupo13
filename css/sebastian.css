@@ -1,0 +1,80 @@
+/* Estilos específicos para el Medidor de Hype */
+
+.hype-meter {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background: #fff;
+    border: 3px solid #111;
+    transform: rotate(-1.5deg);
+    transition: transform 0.2s ease;
+}
+
+.hype-meter:hover {
+    transform: rotate(0deg);
+}
+
+.hype-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 12px;
+    background: #111;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.hype-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    background: var(--profile-color, #65D98B);
+    border: 3px solid #111;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.hype-range::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.hype-range::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    background: var(--profile-color, #65D98B);
+    border: 3px solid #111;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.hype-range::-moz-range-thumb:hover {
+    transform: scale(1.2);
+}
+
+.hype-range:focus-visible {
+    outline: 3px dashed var(--profile-color, #65D98B);
+    outline-offset: 4px;
+}
+
+.hype-result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 40px;
+}
+
+.hype-emoji {
+    font-size: 32px;
+}
+
+.hype-text {
+    font-family: "Permanent Marker", cursive;
+    color: #e83268; /* Color de acento usado en el sitio */
+    font-size: 18px;
+    line-height: 1.2;
+}

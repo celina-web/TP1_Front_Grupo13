@@ -41,7 +41,7 @@
 
 - **HTML5** semántico (`header`, `nav`, `main`, `section`, `article`, `dl`, `figure`).
 - **CSS3** propio: Flexbox, Grid, variables CSS (custom properties), `clip-path`, transformaciones 3D y media queries.
-- **JavaScript** vanilla (sin librerías): eventos, manipulación del DOM, `IntersectionObserver`.
+- **JavaScript** vanilla (sin librerías): eventos, manipulación del DOM, `IntersectionObserver` y transiciones entre páginas.
 - **Google Fonts**: Bebas Neue, Permanent Marker y Poppins.
 - **Git + GitHub** para el trabajo colaborativo (una rama por integrante).
 - **Vercel** para la publicación.
@@ -59,12 +59,12 @@ TP1_Front_Grupo13/
 ├── celina.html         # Perfil de Celina
 ├── bitacora.html       # Bitácora del proceso ("World Tour")
 ├── css/
-│   ├── base.css       # Estilos globales: navbar, portada, cards.
+│   ├── base.css       # Estilos globales: navbar, portada, cards y footer.
 │   ├── perfil.css     # Layout compartido de los perfiles individuales
 │   └── bitácora.css   # Layout bitácora, store.
 ├── js/
 │   ├── main.js         # Menú hamburguesa, flip de cards y animaciones de scroll
-│   ├── bitacora.js     # función dinámica para mostrar entradas de la bitácora.
+│   ├── bitacora.js     # Interacción del pase "Una más" de la bitácora.
 │   └── valentina.js    # Función dinámica del perfil de Valentina
 ├── img/                # Fotos, avatares e imágenes del sitio
 └── README.md
@@ -114,6 +114,7 @@ TP1_Front_Grupo13/
 | **≤ 1200 px** | Se reducen los espacios entre columnas. |
 | **≤ 900 px** | Line up en 2 columnas; el perfil pasa a 1 columna con el póster arriba. |
 | **≤ 700 px** | Aparece el menú hamburguesa. |
+| **≤ 600 px** | El footer apila su contenido y centra los enlaces. |
 | **≤ 400 px** | Cards en 1 columna; datos, skills y botones del perfil a ancho completo. |
 
 ---
@@ -126,10 +127,14 @@ TP1_Front_Grupo13/
 |---------|-------------|
 | **Flip de las cards del line up** | Al hacer clic (o Enter/Espacio con el teclado) sobre una card, gira en 3D y muestra el dorso con información del artista. Sólo puede haber una card abierta a la vez. Actualiza `aria-pressed`, `aria-label` y `aria-hidden` para lectores de pantalla. |
 | **Menú hamburguesa** | Debajo de 700 px el menú se colapsa en un botón. Al tocarlo se despliega con transición; se cierra al elegir un enlace o con la tecla `Esc`. |
+| **Transiciones entre páginas** | Los enlaces internos muestran una transición temática; cada perfil de artista tiene un efecto de entrada propio. Respeta `prefers-reduced-motion`. |
 
 
-### Portada (`js/bitácora.js`)
-| **Aparición al hacer scroll** | Con `IntersectionObserver`, las cards y las fechas de la bitácora aparecen con un fundido escalonado a medida que entran en pantalla. Respeta `prefers-reduced-motion`. |
+### Animaciones (`js/main.js`)
+| **Aparición al hacer scroll** | Con `IntersectionObserver`, las cards, los tickets de la bitácora y otros bloques aparecen con un fundido escalonado a medida que entran en pantalla. Respeta `prefers-reduced-motion`. |
+
+### Bitácora (`js/bitacora.js`)
+Controla la apertura y el cierre del pase "Una más".
 
 ### Perfiles
 
@@ -148,7 +153,11 @@ El slider **"🔥 ¿Cuánto hype hay para el show?"** cambia en vivo el mensaje 
 #### Agustín — *(completar)*
 
 #### Celina — Generador de frases aleatorio (`js/celina.js`)
+
 El botón **"📚 Generá una frase random"** elige al azar una frase de autores hispanos reconocidos (los lee dentro de la función celina.js), muestra el resultado debajo del botón (por ejemplo: *"Escribo para los amigos que todavía no conozco. Los que conozco ya están hartos de escucharme - Eduardo Galeano"*).
+
+![Captura: Generador de frases en el perfil de Celina](img/funcion-celina.png)
+
 ---
 
 ## 📓 Bitácora
@@ -168,6 +177,7 @@ La bitácora está en [bitacora.html](bitacora.html), accesible desde el menú p
 |-------------|--------|------|-----------------|
 | Claude Code (app de escritorio) | Claude Opus 5.5 (Anthropic) | Pago | Perfil de Valentina y README |
 | Gemini | Gemini (Google) | Gratuito | Perfil de Sebastián, ideas de interactividad JS y documentación |
+| DeepSeek | DeepSeek | Gratuito | Perfil de Celina,Estructuración de Index y Bitácora, Manchas de CSS, Forma de Ticket CSS, transiciones |
 | *(completar por cada integrante)* | | | |
 
 **Cómo ayudó (perfil de Valentina):**
@@ -180,12 +190,13 @@ La bitácora está en [bitacora.html](bitacora.html), accesible desde el menú p
 - **Documentación:** redacción técnica y estructuración de los apartados de JavaScript y experiencia de usuario en el README.
 
 **Cómo ayudó (perfil de Celina):**
-*(completar)*
+- **Código:** Propuesta de la estructura HTML del index y de la bitácora, las manchas decorativas, la forma de ticket (bordes, recortes, pseudo-elementos) y las transiciones/animaciones en hover o cambio de vista.
+- **Revisión propia:** se revisaron y probaron los cambios en el navegador en todos los tamaños, se hicieron cambios manuales de margenes y paddings que quedaron mal, ajustes propios de la temática y colores.
 
 **Cómo ayudó (perfil de Agustin):**
 *(completar)*
 
-**Imágenes:** las fotos de los perfiles son fotos reales de mascotas (no generadas con IA), elegidas para no publicar fotos personales, como sugiere la consigna.
+**Imágenes:** las fotos de los perfiles son fotos reales de mascotas (no generadas con IA), elegidas para no publicar fotos personales, como sugiere la consigna. Las fotos de la tienda "Merch" están hechas en canva con templates gratuitos.
 
 **Experiencia previa del equipo:** *(completar)*
 

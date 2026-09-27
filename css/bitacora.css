@@ -19,8 +19,12 @@
 .tour {
     width: 100%;
     padding: 100px 7%;
+    background: transparent;
+}
 
-    background: #f5efd9;
+.tour > * {
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -94,6 +98,19 @@
 .tour-date:hover {
     transform: translateY(-3px) rotate(-0.25deg);
     box-shadow: 9px 10px 0 #111;
+}
+
+.tour-date.reveal-on-scroll {
+    transition:
+        opacity 0.65s ease,
+        translate 0.65s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+}
+
+.tour-date.reveal-on-scroll:hover {
+    transition-delay: 0s;
 }
 
 .ticket-info {
@@ -314,6 +331,8 @@
 ========================= */
 
 .store {
+    position: relative;
+    z-index: 1;
     width: 100%;
 
     padding: 100px 7% 130px;
@@ -481,8 +500,8 @@
     .tour-date {
         grid-template-columns: minmax(0, 1fr);
         grid-template-rows: auto auto auto;
-        padding: 18px 16px;
         box-shadow: 4px 4px 0 #111;
+        padding: 18px 16px 0px 16px;
     }
 
     .ticket-info {

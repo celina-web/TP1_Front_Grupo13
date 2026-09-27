@@ -1,6 +1,99 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("#site-navigation");
 
+const pageTransitions = new Map([
+    ["index.html", { effect: "home", label: "WEBFEST", color: "#111111" }],
+    ["bitacora.html", { effect: "tour", label: "BITÁCORA", color: "#e83268" }],
+    ["agustin.html", { effect: "agus", label: "AGUSTÍN", color: "#FF7A45" }],
+    ["sebastian.html", { effect: "sebas", label: "SEBAS", color: "#65D98B" }],
+    ["valentina.html", { effect: "valen", label: "VALEN", color: "#FF4F81" }],
+    ["celina.html", { effect: "celi", label: "CELI", color: "#FFD447" }]
+]);
+
+const pageTransitionParameter = "page-transition";
+const entryEffect = new URL(window.location.href).searchParams.get(pageTransitionParameter);
+
+if (entryEffect && [...pageTransitions.values()].some(({ effect }) => effect === entryEffect)) {
+    document.documentElement.classList.add(`page-enter--${entryEffect}`);
+
+    const cleanUrl = new URL(window.location.href);
+    cleanUrl.searchParams.delete(pageTransitionParameter);
+    window.history.replaceState(window.history.state, "", `${cleanUrl.pathname}${cleanUrl.search}${cleanUrl.hash}`);
+}
+
+let pageTransitionInProgress = false;
+
+document.addEventListener("click", (event) => {
+    if (
+        !(event.target instanceof Element) ||
+        !(event instanceof MouseEvent) ||
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+        return;
+    }
+
+    const link = event.target.closest("a[href]");
+
+    if (
+        !(link instanceof HTMLAnchorElement) ||
+        link.hasAttribute("download") ||
+        (link.target && link.target.toLowerCase() !== "_self") ||
+        link.relList.contains("external")
+    ) {
+        return;
+    }
+
+    const destination = new URL(link.href, window.location.href);
+    const destinationFile = destination.pathname.slice(destination.pathname.lastIndexOf("/") + 1).toLowerCase();
+    const transition = pageTransitions.get(destinationFile);
+
+    if (
+        destination.origin !== window.location.origin ||
+        !["http:", "https:", "file:"].includes(destination.protocol) ||
+        destination.pathname === window.location.pathname ||
+        !transition
+    ) {
+        return;
+    }
+
+    event.preventDefault();
+
+    if (pageTransitionInProgress) {
+        return;
+    }
+
+    pageTransitionInProgress = true;
+    destination.searchParams.set(pageTransitionParameter, transition.effect);
+
+    const overlay = document.createElement("div");
+    overlay.className = `page-transition page-transition--${transition.effect}`;
+    overlay.setAttribute("aria-hidden", "true");
+    overlay.textContent = transition.label;
+    overlay.style.setProperty("--page-transition-color", transition.color);
+    document.body.append(overlay);
+
+    let hasNavigated = false;
+    const navigate = () => {
+        if (hasNavigated) {
+            return;
+        }
+
+        hasNavigated = true;
+        window.location.assign(destination.href);
+    };
+
+    overlay.addEventListener("animationend", navigate, { once: true });
+    window.setTimeout(navigate, 800);
+});
+
+const randomProfileButton = document.querySelector("#random-profile");
+
 // Animación cartas artistas
 const setCardFlipped = (card, isFlipped) => {
     const front = card.querySelector(".artist-card-front");
@@ -60,6 +153,28 @@ document.querySelectorAll(".artist-card").forEach((card) => {
         }
     });
 });
+
+if (randomProfileButton instanceof HTMLButtonElement) {
+    randomProfileButton.addEventListener("click", () => {
+        const artistCards = document.querySelectorAll(".artist-card");
+
+        if (artistCards.length === 0) {
+            return;
+        }
+
+        const randomIndex = Math.floor(Math.random() * artistCards.length);
+        const randomCard = artistCards[randomIndex];
+
+        document.querySelectorAll(".artist-card.is-flipped").forEach((openCard) => {
+            if (openCard !== randomCard) {
+                setCardFlipped(openCard, false);
+            }
+        });
+
+        setCardFlipped(randomCard, true);
+        randomCard.scrollIntoView({ block: "center" });
+    });
+}
 
 // Menú hamburguesa en pantallas pequeñas
 if (menuToggle instanceof HTMLButtonElement && navigation instanceof HTMLElement) {

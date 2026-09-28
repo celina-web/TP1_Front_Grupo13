@@ -141,7 +141,7 @@ TP1_Front_Grupo13/
 | **Aparición al hacer scroll** | Con `IntersectionObserver`, las cards, los tickets de la bitácora y otros bloques aparecen con un fundido escalonado a medida que entran en pantalla. Respeta `prefers-reduced-motion`. |
 
 ### Bitácora (`js/bitacora.js`)
-Controla la apertura y el cierre del pase "Una más".
+Controla la apertura y el cierre del pase "Una más", y como la bitácora es larga, maneja un botón que aparece al desplazarse para abajo que te lleva al principio de la misma.
 
 ### Perfiles
 

@@ -272,6 +272,17 @@ main:not(.hero):not(.profile) {
     to { opacity: 1; transform: translateX(0) rotate(-1.5deg); }
 }
 
+@media (max-width: 700px) {
+    .page-enter--valen .profile-poster {
+        animation-name: page-enter-valen-mobile;
+    }
+}
+
+@keyframes page-enter-valen-mobile {
+    from { opacity: 0; transform: translateY(24px) rotate(-1.5deg); }
+    to { opacity: 1; transform: translateY(0) rotate(-1.5deg); }
+}
+
 @keyframes page-enter-celi {
     from { opacity: 0; clip-path: circle(0 at 50% 50%); }
     to { opacity: 1; clip-path: circle(150vmax at 50% 50%); }

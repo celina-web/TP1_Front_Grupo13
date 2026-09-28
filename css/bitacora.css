@@ -763,3 +763,49 @@
     color: #111;
     margin: 0;
 }
+
+/* =========================
+   BOTON VOLVER A TOP
+========================= */
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 50;
+    width: 52px;
+    height: 52px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px;
+    line-height: 1;
+    color: #fff;
+    background: #111;
+    border: 3px solid #e83268;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 #e83268;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.back-to-top[hidden] {
+    display: none;
+}
+
+.back-to-top:hover {
+    background: #e83268;
+    transform: translateY(-3px);
+}
+
+.back-to-top:focus-visible {
+    outline: 3px dashed #e83268;
+    outline-offset: 4px;
+}
+
+@media (max-width: 400px) {
+    .back-to-top {
+        right: 16px;
+        bottom: 16px;
+        width: 44px;
+        height: 44px;
+    }
+}

@@ -18,3 +18,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+const backToTop = document.getElementById("back-to-top");
+
+if (backToTop) {
+    const toggleBackToTop = () => {
+        backToTop.hidden = window.scrollY < 400;
+    };
+
+    window.addEventListener("scroll", toggleBackToTop, { passive: true });
+    toggleBackToTop();
+
+    backToTop.addEventListener("click", () => {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+}

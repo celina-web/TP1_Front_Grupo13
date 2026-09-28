@@ -1,0 +1,25 @@
+.profile {
+    --profile-color: #FFD447;
+}
+
+.profile-skills li:nth-child(even) {
+    background: #FF4F81;
+}
+
+
+
+.frase-generada {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    background: #fff;
+    border: 3px solid #111;
+    transform: rotate(-1.5deg);
+    transition: transform 0.2s ease;
+}
+
+.frase-generada:hover {
+    transform: rotate(0deg);
+}
+

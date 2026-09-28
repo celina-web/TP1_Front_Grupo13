@@ -135,6 +135,7 @@ TP1_Front_Grupo13/
 | **Flip de las cards del line up** | Al hacer clic (o Enter/Espacio con el teclado) sobre una card, gira en 3D y muestra el dorso con información del artista. Sólo puede haber una card abierta a la vez. Actualiza `aria-pressed`, `aria-label` y `aria-hidden` para lectores de pantalla. |
 | **Menú hamburguesa** | Debajo de 700 px el menú se colapsa en un botón. Al tocarlo se despliega con transición; se cierra al elegir un enlace o con la tecla `Esc`. |
 | **Transiciones entre páginas** | Los enlaces internos muestran una transición temática; cada perfil de artista tiene un efecto de entrada propio. Respeta `prefers-reduced-motion`. |
+| **Perfil al azar** | Da vuelta una de las cards del line up al azar. |
 
 
 ### Animaciones (`js/main.js`)

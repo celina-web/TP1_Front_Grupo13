@@ -243,7 +243,7 @@ main:not(.hero):not(.profile) {
     animation: page-enter-valen 650ms both;
 }
 
-.page-enter--celi .profile {
+.page-enter--celi .profile-poster {
     animation: page-enter-celi 750ms both;
 }
 
@@ -284,8 +284,8 @@ main:not(.hero):not(.profile) {
 }
 
 @keyframes page-enter-celi {
-    from { opacity: 0; clip-path: circle(0 at 50% 50%); }
-    to { opacity: 1; clip-path: circle(150vmax at 50% 50%); }
+    from { opacity: 0; transform: translateY(-56px) rotate(-1.5deg); }
+    to { opacity: 1; transform: translateY(0) rotate(-1.5deg); }
 }
 
 
@@ -1162,7 +1162,12 @@ a.logo:visited {
     }
 
     .nav-dropdown {
+        align-items: stretch;
         border-top: 1px solid rgb(17 17 17 / 15%);
+    }
+
+    .nav-dropdown > a {
+        width: 100%;
     }
 
     .nav-submenu {
@@ -1222,7 +1227,7 @@ a.logo:visited {
     .page-enter--agus main,
     .page-enter--sebas .profile-poster,
     .page-enter--valen .profile-poster,
-    .page-enter--celi .profile {
+    .page-enter--celi .profile-poster {
         animation: none;
     }
 }

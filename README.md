@@ -61,11 +61,17 @@ TP1_Front_Grupo13/
 ├── css/
 │   ├── base.css       # Estilos globales: navbar, portada, cards y footer.
 │   ├── perfil.css     # Layout compartido de los perfiles individuales
-│   └── bitácora.css   # Layout bitácora, store.
+│   ├── bitácora.css   # Layout bitácora, store.
+│   ├── sebastian.css  # Estilos del perfil de Sebastian.
+│   ├── celina.css     # Estilos del perfil de Celina.
+│   └── agustin.css    # Estilos del reproductor del perfil de Agustín.
 ├── js/
 │   ├── main.js         # Menú hamburguesa, flip de cards y animaciones de scroll
 │   ├── bitacora.js     # Interacción del pase "Una más" de la bitácora.
-│   └── valentina.js    # Función dinámica del perfil de Valentina
+│   ├── valentina.js    # Función dinámica del perfil de Valentina
+│   ├── sebas.js        # Función dinámica del perfil de Sebas
+│   ├── celina.js       # Función dinámica del perfil de Celina
+│   └── agustin.js      # Función dinámica del perfil de Agustín
 ├── img/                # Fotos, avatares e imágenes del sitio
 └── README.md
 ```
@@ -82,7 +88,8 @@ TP1_Front_Grupo13/
 | ![#111111](https://placehold.co/20x20/111111/111111.png) | `#111111` | Texto, bordes y botones |
 | ![#65D98B](https://placehold.co/20x20/65D98B/65D98B.png) | `#65D98B` | Card de Sebas |
 | ![#FF4F81](https://placehold.co/20x20/FF4F81/FF4F81.png) | `#FF4F81` | Card y perfil de Valen |
-| ![#FF7A45](https://placehold.co/20x20/FF7A45/FF7A45.png) | `#FF7A45` | Card de Agus |
+| ![#FF7A45](https://placehold.co/20x20/FF7A45/FF7A45.png) | `#FF7A45` | Card y perfil de Agus |
+| ![#FFE3D6](https://placehold.co/20x20/FF7A45/FF7A45.png) | `#FFE3D6` | Fondo del reproductor de Agus |
 | ![#FFD447](https://placehold.co/20x20/FFD447/FFD447.png) | `#FFD447` | Card de Celi |
 | ![#e83268](https://placehold.co/20x20/e83268/e83268.png) | `#E83268` | Acentos: subtítulos, comentarios de bitácora, hover |
 | ![#ff7a18](https://placehold.co/20x20/ff7a18/ff7a18.png) | `#FF7A18` | Hover de los enlaces del menú |
@@ -150,7 +157,11 @@ El slider **"🔥 ¿Cuánto hype hay para el show?"** cambia en vivo el mensaje 
 
 ![Captura: Medidor de hype en el perfil de Sebas](img/hype-sebas.jpeg)
 
-#### Agustín — *(completar)*
+#### Agustín — Reproductor de discos (`js/agustin.js`)
+
+El botón **"▶ Play"** simula que suena uno de los discos favoritos (los lee de la lista del HTML): lo resalta en la lista, anima un ecualizador hecho con CSS y llena una barra de progreso. Cuando la barra se completa, pasa solo al siguiente disco; también se puede avanzar con **"⏭ Siguiente"** o frenar con **"⏸ Pausa"**. El disco que suena se muestra en una región `aria-live` para lectores de pantalla.
+
+![Captura: reproductor en el perfil de Agustín](img/funcion-agus.png)
 
 #### Celina — Generador de frases aleatorio (`js/celina.js`)
 
@@ -178,7 +189,7 @@ La bitácora está en [bitacora.html](bitacora.html), accesible desde el menú p
 | Claude Code (app de escritorio) | Claude Opus 5.5 (Anthropic) | Pago | Perfil de Valentina y README |
 | Gemini | Gemini (Google) | Gratuito | Perfil de Sebastián, ideas de interactividad JS y documentación |
 | DeepSeek | DeepSeek | Gratuito | Perfil de Celina,Estructuración de Index y Bitácora, Manchas de CSS, Forma de Ticket CSS, transiciones |
-| *(completar por cada integrante)* | | | |
+| Claude (claude.ai) | Claude Opus 5.5 (Anthropic) | Pago | Perfil de Agustín, reproductor JS y documentación |
 
 **Cómo ayudó (perfil de Valentina):**
 - **Código:** propuesta del layout compartido de perfiles (`css/perfil.css`), del recomendador aleatorio (`js/valentina.js`) y del ajuste en `main.js` para que el enlace "VER PERFIL" dentro de la card no dispare el giro.
@@ -194,7 +205,10 @@ La bitácora está en [bitacora.html](bitacora.html), accesible desde el menú p
 - **Revisión propia:** se revisaron y probaron los cambios en el navegador en todos los tamaños, se hicieron cambios manuales de margenes y paddings que quedaron mal, ajustes propios de la temática y colores.
 
 **Cómo ayudó (perfil de Agustin):**
-*(completar)*
+- **Código:** sugerencias para la estructura del perfil, ayuda para coherencia de diseño con resto de perfiles y la lógica del reproductor.
+- **Debugging:** ayuda para detectar errores al probar la interacción. Hubo un intento para pegar un iframe de spotify pero no funcionaba bien y se descarto.
+- **Documentación:** apoyo para redactar la parte del README correspondiente al perfil.
+- **Revisión propia:** se adaptaron los contenidos y el diseño, y se comprobó que el perfil se adapte bien a distintos tamaños en el navegador.
 
 **Imágenes:** las fotos de los perfiles son fotos reales de mascotas (no generadas con IA), elegidas para no publicar fotos personales, como sugiere la consigna. Las fotos de la tienda "Merch" están hechas en canva con templates gratuitos.
 

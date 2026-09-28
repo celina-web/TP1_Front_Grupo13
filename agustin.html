@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/agustin.css">
     <title>Agus | WebFest 2026</title>
 </head>
 <body>
@@ -47,10 +49,6 @@
 
     </header>
 
-    <main>
-        <h1>Agustín</h1>
-    </main>
-
     <!-- Manchas decorativas -->
     <div class="festival-splashes" aria-hidden="true">
         <span class="festival-splash festival-splash--green"></span>
@@ -58,6 +56,99 @@
         <span class="festival-splash festival-splash--orange"></span>
         <span class="festival-splash festival-splash--yellow"></span>
     </div>
+
+    <!-- PERFIL -->
+    <main class="profile" style="--profile-color: #ff7a45;">
+
+        <div class="profile-poster">
+
+            <figure class="profile-photo">
+                <img src="img/agus-mascota.jpeg" alt="El perro que Agus todavía no tiene, pero espera para el futuro">
+                <figcaption>No tengo perro, pero si tuviera, sería este</figcaption>
+            </figure>
+
+            <div class="profile-heading">
+                <span class="profile-number">#03</span>
+                <h1>AGUS</h1>
+                <p class="profile-fullname">Agustín</p>
+            </div>
+
+        </div>
+
+        <section class="profile-data" aria-label="Datos de Agustín">
+
+            <dl class="profile-facts">
+                <div>
+                    <dt>Ciudad</dt>
+                    <dd>San Nicolás (Congreso), CABA</dd>
+                </div>
+                <div>
+                    <dt>Edad</dt>
+                    <dd>35 años</dd>
+                </div>
+            </dl>
+
+            <p class="profile-bio">
+                Vengo del mundo de los datos, pero me encargo además de entender procesos para mejorarlos, resolver problemas (muchas veces que no tienen absolutamente nada que ver conmigo), entre otras cosas. 
+                Si me buscan seguramente me van a encontrar quejándome de algo, pero con rock de fondo. Motto: "My parents raised a complainer, not a quitter"
+            </p>
+
+            <div class="profile-block">
+                <h2>Skills</h2>
+                <ul class="profile-list profile-skills">
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Power BI</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+
+            <div class="profile-block">
+                <h2>Películas favoritas</h2>
+                <ol class="profile-list profile-picks" data-kind="película">
+                    <li>Interstellar <small>(2014)</small></li>
+                    <li>La Odisea <small>(2026)</small></li>
+                    <li>El exorcista <small>(1973)</small></li>
+                </ol>
+            </div>
+
+            <div class="profile-block">
+                <h2>Discos favoritos</h2>
+                <ol class="profile-list profile-picks" data-kind="disco">
+                    <li>Ten <small>— Pearl Jam</small></li>
+                    <li>AM <small>— Arctic Monkeys</small></li>
+                    <li>La vida era más corta <small>— Milo J</small></li>
+                </ol>
+            </div>
+
+            <!-- FUNCIÓN DINÁMICA: reproductor ficticio (js/agustin.js) -->
+            <div class="profile-block">
+                <h2>Sonando ahora</h2>
+                <div class="agus-player">
+                    <div class="agus-player-info">
+                        <div class="agus-eq" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                        <p class="agus-now" id="agus-now" aria-live="polite">Elegí play para arrancar el show</p>
+                    </div>
+                    <div class="agus-controls">
+                        <button type="button" class="profile-random-btn" id="agus-play">▶ Play</button>
+                        <button type="button" class="profile-random-btn" id="agus-next">⏭ Siguiente</button>
+                    </div>
+                    <div class="agus-progress" aria-hidden="true">
+                        <span id="agus-progress-bar"></span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <nav class="profile-actions" aria-label="Navegación del perfil">
+            <a href="index.html#artistas" class="profile-btn">← Volver al line up</a>
+            <a href="bitacora.html" class="profile-btn profile-btn-outline">Ver bitácora →</a>
+        </nav>
+
+    </main>
 
     <footer class="site-footer">
         <div class="site-footer-inner">
@@ -75,5 +166,6 @@
     </footer>
 
     <script src="js/main.js" defer></script>
+    <script src="js/agustin.js" defer></script>
 </body>
 </html>

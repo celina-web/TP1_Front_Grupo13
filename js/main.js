@@ -23,6 +23,21 @@ if (entryEffect && [...pageTransitions.values()].some(({ effect }) => effect ===
 
 let pageTransitionInProgress = false;
 
+const clearPageTransition = () => {
+    document.querySelectorAll(".page-transition").forEach((overlay) => overlay.remove());
+    [...document.documentElement.classList]
+        .filter((className) => className.startsWith("page-enter--"))
+        .forEach((className) => document.documentElement.classList.remove(className));
+    pageTransitionInProgress = false;
+};
+
+window.addEventListener("pagehide", clearPageTransition);
+window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+        clearPageTransition();
+    }
+});
+
 document.addEventListener("click", (event) => {
     if (
         !(event.target instanceof Element) ||

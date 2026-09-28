@@ -11,10 +11,17 @@ html {
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: #f5efd9;
     color: #111111;
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+}
+
+body > main {
+    flex: 1 0 auto;
 }
 
 /* MANCHAS CON LOS COLORES DEL LINE UP */
@@ -301,6 +308,43 @@ main:not(.hero):not(.profile) {
     gap: 40px;
 }
 
+.nav-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-dropdown > a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-submenu {
+    position: absolute;
+    top: 100%;
+    left: -16px;
+    z-index: 30;
+    display: flex;
+    min-width: 170px;
+    flex-direction: column;
+    padding: 8px 16px;
+    background: #f5efd9;
+    box-shadow: 0 8px 12px rgb(0 0 0 / 16%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.nav-dropdown:hover .nav-submenu,
+.nav-dropdown:focus-within .nav-submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
 .navbar nav a {
   font-size: 18px;
   font-weight: 700;
@@ -317,7 +361,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-nav:has(a:hover) a:not(:hover) {
+.navbar nav:has(> a:hover) > a:not(:hover) {
   opacity: 0.3;
 }
 
@@ -1104,6 +1148,14 @@ a.logo:visited {
 
     .navbar nav a + a {
         border-top: 1px solid rgb(17 17 17 / 15%);
+    }
+
+    .nav-dropdown {
+        border-top: 1px solid rgb(17 17 17 / 15%);
+    }
+
+    .nav-submenu {
+        display: none;
     }
 
     .js-ready .navbar nav {

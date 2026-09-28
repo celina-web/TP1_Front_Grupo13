@@ -4,7 +4,7 @@ const navigation = document.querySelector("#site-navigation");
 const pageTransitions = new Map([
     ["index.html", { effect: "home", label: "WEBFEST", color: "#111111" }],
     ["bitacora.html", { effect: "tour", label: "BITÁCORA", color: "#e83268" }],
-    ["agustin.html", { effect: "agus", label: "AGUSTÍN", color: "#FF7A45" }],
+    ["agustin.html", { effect: "agus", label: "AGUS", color: "#FF7A45" }],
     ["sebastian.html", { effect: "sebas", label: "SEBAS", color: "#65D98B" }],
     ["valentina.html", { effect: "valen", label: "VALEN", color: "#FF4F81" }],
     ["celina.html", { effect: "celi", label: "CELI", color: "#FFD447" }]

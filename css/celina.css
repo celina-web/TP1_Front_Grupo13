@@ -6,6 +6,9 @@
     background: #FF4F81;
 }
 
+.profile-random-result {
+    color: #111111;
+}
 
 
 .frase-generada {
@@ -13,13 +16,16 @@
     flex-direction: column;
     gap: 16px;
     padding: 20px;
-    background: #fff;
+    background: #FFD447;
     border: 3px solid #111;
     transform: rotate(-1.5deg);
     transition: transform 0.2s ease;
 }
 
+.frase-generada[hidden] {
+    display: none;
+}
+
 .frase-generada:hover {
     transform: rotate(0deg);
 }
-

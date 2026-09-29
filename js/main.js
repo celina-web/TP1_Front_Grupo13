@@ -171,14 +171,19 @@ document.querySelectorAll(".artist-card").forEach((card) => {
 
 if (randomProfileButton instanceof HTMLButtonElement) {
     randomProfileButton.addEventListener("click", () => {
-        const artistCards = document.querySelectorAll(".artist-card");
+        const artistCards = [...document.querySelectorAll(".artist-card")];
 
         if (artistCards.length === 0) {
             return;
         }
 
-        const randomIndex = Math.floor(Math.random() * artistCards.length);
-        const randomCard = artistCards[randomIndex];
+        const availableCards = artistCards.filter((card) => !card.classList.contains("is-flipped"));
+
+        if (availableCards.length === 0) {
+            return;
+        }
+
+        const randomCard = availableCards[Math.floor(Math.random() * availableCards.length)];
 
         document.querySelectorAll(".artist-card.is-flipped").forEach((openCard) => {
             if (openCard !== randomCard) {

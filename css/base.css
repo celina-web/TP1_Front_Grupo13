@@ -39,7 +39,6 @@ body > main {
     display: block;
     width: clamp(88px, 14vw, 190px);
     aspect-ratio: 1 / 1.35;
-    opacity: 0.5;
 }
 
 .festival-splash--green {
@@ -340,7 +339,7 @@ main:not(.hero):not(.profile) {
     flex-direction: column;
     padding: 8px 16px;
     background: #f5efd9;
-    box-shadow: 0 8px 12px rgb(0 0 0 / 16%);
+    box-shadow: 0 8px 12px #00000029;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -683,7 +682,7 @@ nav a:hover {
     border-radius: 10px;
 
     background: #111;
-    color: white;
+    color: #ffffff;
 
     font-family: "Poppins", sans-serif;
     font-weight: 700;
@@ -694,7 +693,7 @@ nav a:hover {
 }
 
 .explore:hover {
-    background: transparent;
+    background: #00000000;
     color: #111;
 
     transform: translateY(-3px);
@@ -881,7 +880,6 @@ nav a:hover {
 
     .festival-splash {
         width: 100px;
-        opacity: 0.42;
     }
 
 
@@ -1116,7 +1114,7 @@ a.logo:visited {
         gap: 5px;
         border: 2px solid #111;
         border-radius: 5px;
-        background: transparent;
+        background: #00000000;
         cursor: pointer;
     }
 
@@ -1158,12 +1156,12 @@ a.logo:visited {
     }
 
     .navbar nav a + a {
-        border-top: 1px solid rgb(17 17 17 / 15%);
+        border-top: 1px solid #11111126;
     }
 
     .nav-dropdown {
         align-items: stretch;
-        border-top: 1px solid rgb(17 17 17 / 15%);
+        border-top: 1px solid #11111126;
     }
 
     .nav-dropdown > a {
@@ -1188,7 +1186,7 @@ a.logo:visited {
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        box-shadow: 0 8px 12px rgb(0 0 0 / 12%);
+        box-shadow: 0 8px 12px #0000001f;
         transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.2s ease, visibility 0.3s;
     }
 

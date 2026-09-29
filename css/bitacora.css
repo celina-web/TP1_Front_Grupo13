@@ -19,7 +19,7 @@
 .tour {
     width: 100%;
     padding: 100px 7%;
-    background: transparent;
+    background: #00000000;
 }
 
 .tour > * {
@@ -245,11 +245,11 @@
     background: repeating-linear-gradient(
         90deg,
         #111 0 2px,
-        transparent 2px 4px,
+        #00000000 2px 4px,
         #111 4px 5px,
-        transparent 5px 8px,
+        #00000000 5px 8px,
         #111 8px 11px,
-        transparent 11px 13px
+        #00000000 11px 13px
     );
 }
 
@@ -306,7 +306,7 @@
 .tickets:hover {
     background: #111;
 
-    color: white;
+    color: #ffffff;
 
     transform: translateY(-3px);
 }
@@ -339,7 +339,7 @@
 
     background: #111;
 
-    color: white;
+    color: #ffffff;
 }
 
 .store-title {
@@ -349,7 +349,7 @@
 }
 
 .store-title h2 {
-    color: white;
+    color: #ffffff;
 }
 
 
@@ -433,7 +433,7 @@
 
     background: #111;
 
-    color: white;
+    color: #ffffff;
 
     text-decoration: none;
 

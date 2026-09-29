@@ -213,7 +213,7 @@ La bitácora está en [bitacora.html](bitacora.html), accesible desde el menú p
 
 **Imágenes:** las fotos de los perfiles son fotos reales de mascotas (no generadas con IA), elegidas para no publicar fotos personales, como sugiere la consigna. Las fotos de la tienda "Merch" están hechas en canva con templates gratuitos.
 
-**Experiencia previa del equipo:** *(completar)*
+**Experiencia previa del equipo:** Como estudiantes de desarrollo, en los últimos años nos fuimos adaptando al avance de la IA, no solo para ganar productividad sino también como herramienta de aprendizaje, para entender y fijar mejor los contenidos. Ya la usábamos como apoyo para consultas y debugging, pero este fue el primer proyecto en el que documentamos formalmente su uso.
 
 ---
 

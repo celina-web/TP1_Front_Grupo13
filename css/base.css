@@ -39,6 +39,7 @@ body > main {
     display: block;
     width: clamp(88px, 14vw, 190px);
     aspect-ratio: 1 / 1.35;
+    opacity: 0.5;
 }
 
 .festival-splash--green {
@@ -880,6 +881,7 @@ nav a:hover {
 
     .festival-splash {
         width: 100px;
+        opacity: 0.42;
     }
 
 

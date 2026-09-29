@@ -231,7 +231,7 @@ main:not(.hero):not(.profile) {
     animation: page-enter-tour 650ms both;
 }
 
-.page-enter--agus main {
+.page-enter--agus .profile-poster {
     animation: page-enter-agus 650ms both;
 }
 
@@ -258,8 +258,8 @@ main:not(.hero):not(.profile) {
 }
 
 @keyframes page-enter-agus {
-    from { opacity: 0; transform: scale(0.88) rotate(2deg); }
-    to { opacity: 1; transform: scale(1) rotate(0); }
+    from { opacity: 0; transform: translateY(24px) rotate(-1.5deg); }
+    to { opacity: 1; transform: translateY(0) rotate(-1.5deg); }
 }
 
 @keyframes page-enter-sebas {
@@ -1224,7 +1224,7 @@ a.logo:visited {
     .page-transition,
     .page-enter--home .hero-content,
     .page-enter--tour main,
-    .page-enter--agus main,
+    .page-enter--agus .profile-poster,
     .page-enter--sebas .profile-poster,
     .page-enter--valen .profile-poster,
     .page-enter--celi .profile-poster {
